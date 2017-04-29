@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter Live</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;    /*Alto del viewport*/
+        }
+        .like{
+            background-color: white;
+            border: 0;
+            cursor: pointer;
+            /*width: 100px;
+            height: 100px;*/
+            width: 50px;
+            height: 50px;
+            background-image: url(58f6745542cef80b0a0acbf3.png);
+            outline: 0;
+            background-size: 1450px 50px;
+        }
+        .like.is-liked{
+            animation-name: like;
+            animation-duration: .8s;
+            animation-timing-function: steps(28);
+            animation-fill-mode: forwards;
+        }
+        @keyframes like{
+            0% {
+                background-position: 0 0;
+            }
+            100%{
+                /*background-position: -2800px 0;  */
+                /*background-position: -1450px 0; */
+                background-position: right;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="tweet-box">
+        
+        <button class="like is-liked" id="like">
+            
+        </button>
+        
+    </div>
+    <script>
+        const $like = document.getElementById('like');
+        // $like.addEventListener('evento', que hace el evento)
+        $like.addEventListener('click', (event) =>{
+            // console.log(event);
+            $like.classList.toggle('ist-liked');
+        });
+    
+    
+    </script>
+    
+</body>
+</html>
